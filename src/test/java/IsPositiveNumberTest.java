@@ -10,7 +10,7 @@ public class IsPositiveNumberTest {
      */
 
     @Test
-    public void IsPositiveNumberTest_PositiveNumber_HappyPath() {
+    public void IsPositiveNumber_PositiveNumber_HappyPath() {
         //AAA
         //arrange
         int num = 555;
@@ -25,7 +25,7 @@ public class IsPositiveNumberTest {
     }
 
     @Test
-    public void IsPositiveNumberTest_Zero_HappyPath() {
+    public void IsPositiveNumber_Zero_HappyPath() {
         //AAA
         //arrange
         int num = 0;
@@ -40,7 +40,7 @@ public class IsPositiveNumberTest {
     }
 
     @Test
-    public void IsPositiveNumberTest_NegativeNumber_HappyPath() {
+    public void IsPositiveNumber_NegativeNumber_HappyPath() {
         //AAA
         //arrange
         int num = -555;
