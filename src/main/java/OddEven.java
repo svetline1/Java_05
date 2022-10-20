@@ -6,11 +6,11 @@ public class OddEven {
 
 
     public String oddEven(int num) {
-        if (Math.abs(num) % 2 == 1) {
+        if (num % 2 == 0) {
 
-            return "Odd";
+            return "Even";
         }
 
-        return "Even";
+        return "Odd";
     }
 }
