@@ -108,7 +108,58 @@ public class ManipulationsWithArraysTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+/* В классе ManipulationsWithArrays написать метод areValuesGreaterThanNumber(), который
+   принимает на вход массив целых чисел и число number. Метод возвращает значение true,
+   если все элементы массива больше number, иначе возвращает false
+    */
 
+    @Test
+    public void testAreValuesGreaterThanNumber_NumbersGreater_HappyPath() {
+        //AAA
+        //arrange
+
+        int[] array = {1, 2, 3, 4, 5};
+        int num = 0;
+        boolean expectedResult = true;
+
+        //act
+        boolean actualResult = new ManipulationsWithArrays().areValuesGreaterThanNumber(array, num);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testAreValuesGreaterThanNumber_NumbersEqual_HappyPath() {
+        //AAA
+        //arrange
+
+        int[] array = {1, 2, 3, 4, 5};
+        int num = 1;
+        boolean expectedResult = false;
+
+        //act
+        boolean actualResult = new ManipulationsWithArrays().areValuesGreaterThanNumber(array, num);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testAreValuesGreaterThanNumber_NumbersLess_HappyPath() {
+        //AAA
+        //arrange
+
+        int[] array = {1, 2, 3, 4, 5};
+        int num = 7;
+        boolean expectedResult = false;
+
+        //act
+        boolean actualResult = new ManipulationsWithArrays().areValuesGreaterThanNumber(array, num);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
 
 
 

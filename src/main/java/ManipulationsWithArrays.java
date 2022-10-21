@@ -78,8 +78,23 @@ public class ManipulationsWithArrays {
         return array;
     }
 
+   /* В классе ManipulationsWithArrays написать метод areValuesGreaterThanNumber(), который
+   принимает на вход массив целых чисел и число number. Метод возвращает значение true,
+   если все элементы массива больше number, иначе возвращает false
+    */
 
+    public boolean areValuesGreaterThanNumber(int array[], int num) {
 
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] <= num) {
+
+                return false;
+            }
+        }
+
+        return true;
+
+    }
 
 
 
