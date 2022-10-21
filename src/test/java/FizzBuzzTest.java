@@ -81,4 +81,83 @@ public class FizzBuzzTest {
     }
 
 
+    /*Given an integer M perform the following conditional actions:
+    If M is multiple of 7 and 9 then return "Good Number".
+    If M is only multiple of 9 and not of 7  then return "Bad Number"
+    If M is only multiple of 11 then return "Poor Number"
+    If M doesn't satisfy any of the above conditions then return "-1"
+
+     */
+
+
+    @Test
+    public void whatNumberIsM_div7and9_HappyPath() {
+        //AAA
+        //arrange
+        int M = 63;
+        String expectedResult = "Good Number";
+
+        //act
+        String actualResult = new FizzBuzz().whatNumberIsM(M);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void whatNumberIsM_div9_HappyPath() {
+        //AAA
+        //arrange
+        int M = 81;
+        String expectedResult = "Bad Number";
+
+        //act
+        String actualResult = new FizzBuzz().whatNumberIsM(M);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void whatNumberIsM_div11_HappyPath() {
+        //AAA
+        //arrange
+        int M = 121;
+        String expectedResult = "Poor Number";
+
+        //act
+        String actualResult = new FizzBuzz().whatNumberIsM(M);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void whatNumberIsM_notDiv7or9or11_HappyPath() {
+        //AAA
+        //arrange
+        int M = 3;
+        String expectedResult = "-1";
+
+        //act
+        String actualResult = new FizzBuzz().whatNumberIsM(M);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void whatNumberIsM_mIsZero_HappyPath() {
+        //AAA
+        //arrange
+        int M = 0;
+        String expectedResult = "Good Number";
+
+        //act
+        String actualResult = new FizzBuzz().whatNumberIsM(M);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
 }
