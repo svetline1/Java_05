@@ -63,6 +63,65 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+/*Написать алгоритм removeAllAs().
+    С помощью методов из видео1,  написать алгоритм, который принимает на вход строку. Если строка валидная,
+     то метод удаляет все буквы a из строки, если таковые имеются. Метод возвращает обработанную строку.
+    Test Data:
+            “    Red Rover School   “ →  “Red Rover School“
+            “panda   “ → “pnd”
+            “taramasalata” → “trmslt”
+
+     */
+
+    @Test
+    public void removeAllAs_removeSpaces_HappyPath() {
+        //AAA
+        //arrange
+        String text = "    Red Rover School   ";
+
+        String expectedResult = "Red Rover School";
+
+        //act
+        String actualResult = new StringMethods().removeAllAs(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void removeAllAs_removeSpacesAndAs_HappyPath() {
+        //AAA
+        //arrange
+        String text = "panda   ";
+
+        String expectedResult = "pnd";
+
+        //act
+        String actualResult = new StringMethods().removeAllAs(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void removeAllAs_removeAs_HappyPath() {
+        //AAA
+        //arrange
+        String text = "taramasalata";
+
+        String expectedResult = "trmslt";
+
+        //act
+        String actualResult = new StringMethods().removeAllAs(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+
+
+
+
 
 
 }

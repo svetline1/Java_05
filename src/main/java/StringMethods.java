@@ -32,5 +32,32 @@ public class StringMethods {
 
     }
 
+    /*Написать алгоритм removeAllAs().
+    С помощью методов из видео1,  написать алгоритм, который принимает на вход строку. Если строка валидная,
+     то метод удаляет все буквы a из строки, если таковые имеются. Метод возвращает обработанную строку.
+    Test Data:
+            “    Red Rover School   “ →  “Red Rover School“
+            “panda   “ → “pnd”
+            “taramasalata” → “trmslt”
+
+     */
+
+    public String removeAllAs(String text) {
+
+        if (text.isEmpty() != true) {
+            text = text.trim().replace("a", "");
+
+            return text;
+        }
+
+        return "Строка пустая";
+    }
+
+
+
+
+
+
+
 
 }
