@@ -128,6 +128,7 @@ public class StringMethodsTest {
             “0000000111“ → “111”
 
             "" →  ""
+            “111“ → “This is a valid string”
 
      */
 
@@ -177,9 +178,74 @@ public class StringMethodsTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+    @Test
+    public void removeAllZeros_noZeros_HappyPath() {
+        //AAA
+        //arrange
+        String text = "111";
 
+        String expectedResult = "This is a valid string";
 
+        //act
+        String actualResult = new StringMethods().removeAllZeros(text);
 
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+/*Написать алгоритм removeAllSpaces.
+    С помощью методов из видео1,  написать алгоритм, который принимает на вход строку. Если строка валидная,
+     то метод удаляет все пробелы из строки, если таковые имеются. Метод возвращает обработанную строку.
+    Test Data:
+            “    R e d     Ro ve    r Sc   h ool   “ →  “RedRoverSchool“
+            “p a     n   d a   “ → “panda”
+
+     */
+
+    @Test
+    public void removeAllSpaces_removeAllSpaces1_HappyPath() {
+        //AAA
+        //arrange
+        String text = "    R e d     Ro ve    r Sc   h ool   ";
+
+        String expectedResult = "RedRoverSchool";
+
+        //act
+        String actualResult = new StringMethods().removeAllSpaces(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void removeAllSpaces_removeAllSpaces2_HappyPath() {
+        //AAA
+        //arrange
+        String text = "p a     n   d a   ";
+
+        String expectedResult = "panda";
+
+        //act
+        String actualResult = new StringMethods().removeAllSpaces(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void removeAllSpaces_emptyString_HappyPath() {
+        //AAA
+        //arrange
+        String text = "";
+
+        String expectedResult = "";
+
+        //act
+        String actualResult = new StringMethods().removeAllSpaces(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
 
 
 }
