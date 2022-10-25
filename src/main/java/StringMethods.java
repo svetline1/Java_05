@@ -50,11 +50,38 @@ public class StringMethods {
             return text;
         }
 
-        return "Строка пустая";
+        return "";
     }
 
+    /*Написать алгоритм removeAllZeros().
+    С помощью методов из видео1,  написать алгоритм, который принимает на вход строку, состоящую из цифр.
+    Если строка валидная, то метод удаляет все пробелы из строки, если таковые имеются.
+    Метод возвращает обработанную строку, в которой нет нулей. Если в строке не было нулей,
+    метод возвращает сообщение “This is a valid string”.
+    Test Data:
+            “3504209706040000 “ →  “35429764“
+            “0000000111“ → “111”
 
+     */
 
+    public String removeAllZeros(String text) {
+
+        if (text.isEmpty() != true) {
+            text = text.replace(" ", ""); {
+
+                if (text.equals(text.replace("0", ""))) {
+
+                    return "This is a valid string";
+                } else {
+                    text = text.replace("0", "");
+
+                    return text;
+                }
+            }
+        }
+
+        return "";
+    }
 
 
 
