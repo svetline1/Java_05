@@ -20,10 +20,11 @@ public class StringMethods {
         if (text.isEmpty() == true) {
 
             return "Строка пустая";
-        } if (text.equals(text.trim())) {
+        }
+        if (text.equals(text.trim())) {
 
             return "Пробелов не было";
-        }else{
+        } else {
             text = text.trim();
 
             return "Лишние пробелы удалены";
@@ -67,7 +68,8 @@ public class StringMethods {
     public String removeAllZeros(String text) {
 
         if (text.isEmpty() != true) {
-            text = text.replace(" ", ""); {
+            text = text.replace(" ", "");
+            {
 
                 if (text.equals(text.replace("0", ""))) {
 
@@ -95,14 +97,73 @@ public class StringMethods {
     public String removeAllSpaces(String text) {
 
         if (text.isEmpty() != true) {
-            text = text.replace(" ", ""); {
+            text = text.replace(" ", "");
+            {
 
-                    return text;
+                return text;
             }
         }
 
         return "";
     }
+
+   /* Напишите метод countAs(), который принимает на вход строку и считает, сколько букв а или А
+   содержится в строке. Метод возвращает количество букв a/A,  и количество букв/знаков в слове
+   без букв a/A. Итоговый результат должен строится с помощью метода из видео 2.
+Test Data:
+“Abracadabra” → “5, 6”
+“Homenum Revelio” → “0, 15”
+“3 tarAmasAlatA” → “6, 8”
+
+    */
+
+    public String countAs(String text) {
+
+        if (text.isEmpty() != true) {
+
+            int counter = 0;
+
+            for (int i = 0; i < text.length(); i += 1) {
+
+                if (text.toLowerCase().substring(i, i + 1).contains("a")) {
+                    counter += 1;
+                }
+            }
+
+            return ("" + counter + ", " + (text.length() - counter));
+        }
+
+        return "0";
+    }
+
+    /*Напишите метод countJava(), который принимает на вход текст и проверяет, содержится ли в тексте
+    хотя бы одно слово Java.
+
+    Test Data:
+            “support Java 8 with public updates for personal use indefinitely. Other vendors have begun to”
+        → true
+
+            “9wn, and patch it around.
+            235 critical bugs in the code.” → false
+     */
+
+
+    public boolean countJava(String text) {
+        if (text.toLowerCase().contains("java")) {
+
+            return true;
+        }
+
+        return false;
+    }
+
+
+
+
+
+
+
+
 
 
 }
