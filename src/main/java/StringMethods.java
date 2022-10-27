@@ -225,6 +225,43 @@ Test Data:
         return false;
     }
 
+   /* Напишите метод returnLastWord, который принимает на вход строку из двух слов, разделенных пробелом, и возвращает
+    последнее слово
+    Test Data:
+            “Red Rover” → “Rover”
+
+    */
+
+    public String returnLastWord(String text) {
+        if ((text.length() > 0) && (text.contains(" ")) ){
+
+            return text.substring(text.indexOf(" ") + 1);
+        }
+
+        return "-1";
+    }
+
+    /*Написать метод cutTextBetweenIndexes, который принимает строку, и 2 индекса. Метод удаляет все, что находится между двумя
+     индексами включительно
+    Test Data:
+            “Red rover”, 1, 4 → “Rover”
+     */
+
+    public String cutTextBetweenIndexes(String text, int start, int end) {
+        if (text.length() > 1) {
+
+            return text.substring(0, start).concat(text.substring(end));
+        }
+
+        return "-1";
+    }
+
+
+
+
+
+
+
 
 
 }

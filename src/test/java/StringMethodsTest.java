@@ -538,6 +538,99 @@ Take one down, and patch it around.
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+    /* Напишите метод returnLastWord, который принимает на вход строку из двух слов, разделенных пробелом, и возвращает
+    последнее слово
+    Test Data:
+            “Red Rover” → “Rover”
+
+    */
+
+    @Test
+    public void returnLastWord_HappyPath() {
+        //AAA
+        //arrange
+        String text = "Red Rover";
+
+        String expectedResult = "Rover";
+
+        //act
+        String actualResult = new StringMethods().returnLastWord(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void returnLastWord_noSpace_HappyPath() {
+        //AAA
+        //arrange
+        String text = "RedRover";
+
+        String expectedResult = "-1";
+
+        //act
+        String actualResult = new StringMethods().returnLastWord(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void returnLastWord_noText_HappyPath() {
+        //AAA
+        //arrange
+        String text = "";
+
+        String expectedResult = "-1";
+
+        //act
+        String actualResult = new StringMethods().returnLastWord(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    /*Написать метод cutTextBetweenIndexes, который принимает строку, и 2 индекса. Метод удаляет все, что находится между двумя
+     индексами включительно
+    Test Data:
+            “Red rover”, 1, 4 → “Rover”
+     */
+
+    @Test
+    public void cutTextBetweenIndexes_HappyPath() {
+        //AAA
+        //arrange
+        String text = "RedRover";
+        int start = 1;
+        int end = 4;
+
+        String expectedResult = "Rover";
+
+        //act
+        String actualResult = new StringMethods().cutTextBetweenIndexes(text, start, end);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void cutTextBetweenIndexes2_HappyPath() {
+        //AAA
+        //arrange
+        String text = "";
+        int start = 1;
+        int end = 4;
+
+        String expectedResult = "-1";
+
+        //act
+        String actualResult = new StringMethods().cutTextBetweenIndexes(text, start, end);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+
 
 
 }
