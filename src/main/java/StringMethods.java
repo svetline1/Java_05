@@ -157,12 +157,73 @@ Test Data:
         return false;
     }
 
+    /*
+    Напишите метод insertQuotes(), который принимает слово и возвращает строку, в которой это слово “обернуто” в кавычки:
+
+    Test Data:
+            “Abracadabra” →  ““Abracadabra””
+
+     */
+
+    public String insertQuotes(String text) {
+        String Quote = "\"";
+
+        return Quote.concat(text.concat(Quote));
+    }
+
+    /*Напишите метод  fixCityName, кторый принимает на вход название города и исправляет написание:
+    Test Data:
+            “ташкент” → “Ташкент”
+            “ЧикаГО” → “Чикаго”
+
+     */
+
+    public String fixCityName(String text) {
+        if (text.length() > 0)  {
+
+            return "" + text.toUpperCase().charAt(0) + text.substring(1).toLowerCase();
+        }
+
+        return "";
+        }
+
+    /*Напишите метод, который принимает на вход строку и букву-параметр, и возвращает все, что
+    находится между первой и последней буквой-параметром:
+    Test Data:
+            “Abracadabra”, “b” → “bracadab”
+            “Whippersnapper”, “p” → “ppersnapp”
+     */
+
+    public String returnTextBetweenLetter(String text, char letter) {
+        if ((text.length() > 0) && (text.contains("" + letter) )) {
+
+            return text.substring(text.indexOf(letter), text.lastIndexOf(letter) + 1);
+        }
+
+        return "-1";
+    }
 
 
+    /*Напишите метод, который принимает на вход слово, и возвращает true, если слово начинается и
+     заканчивается на одинаковую букву, и false иначе
+    Test Data:
+            “Abracadabra” → true
+            “Whippersnapper” → false
 
+     */
 
+    public boolean startsAndEndsWithSameLetter(String text) {
+        if ((text.length() > 0)) {
+            if (text.lastIndexOf(text.toLowerCase().charAt(0)) == text.length() - 1) {
 
+                return true;
+            }
 
+            return false;
+        }
+
+        return false;
+    }
 
 
 

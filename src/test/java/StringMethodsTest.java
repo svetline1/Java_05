@@ -353,8 +353,190 @@ Take one down, and patch it around.
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+     /*
+    Напишите метод insertQuotes(), который принимает слово и возвращает строку, в которой это слово
+    “обернуто” в кавычки:
 
+    Test Data:
+            “Abracadabra” →  ““Abracadabra””
 
+     */
+
+    @Test
+    public void insertQuotes_HappyPath() {
+        //AAA
+        //arrange
+        String text = "Abracadabra";
+
+        String expectedResult = "\"Abracadabra\"";
+
+        //act
+        String actualResult = new StringMethods().insertQuotes(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+/*Напишите метод  fixCityName, кторый принимает на вход название города и исправляет написание:
+    Test Data:
+            “ташкент” → “Ташкент”
+            “ЧикаГО” → “Чикаго”
+
+     */
+
+    @Test
+    public void fixCityName_firstLetter_HappyPath() {
+        //AAA
+        //arrange
+        String text = "ташкент";
+
+        String expectedResult = "Ташкент";
+
+        //act
+        String actualResult = new StringMethods().fixCityName(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void fixCityName_lastLetters_HappyPath() {
+        //AAA
+        //arrange
+        String text = "ЧикаГО";
+
+        String expectedResult = "Чикаго";
+
+        //act
+        String actualResult = new StringMethods().fixCityName(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void fixCityName_empty_HappyPath() {
+        //AAA
+        //arrange
+        String text = "";
+
+        String expectedResult = "";
+
+        //act
+        String actualResult = new StringMethods().fixCityName(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    /*Напишите метод, который принимает на вход строку и букву-параметр, и возвращает все, что
+    находится между первой и последней буквой-параметром:
+    Test Data:
+            “Abracadabra”, “b” → “bracadab”
+            “Whippersnapper”, “p” → “ppersnapp”
+     */
+
+    @Test
+    public void returnTextBetweenLetter1_HappyPath() {
+        //AAA
+        //arrange
+        String text = "Abracadabra";
+        char letter = 'b';
+
+        String expectedResult = "bracadab";
+
+        //act
+        String actualResult = new StringMethods().returnTextBetweenLetter(text, letter);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void returnTextBetweenLetter2_HappyPath() {
+        //AAA
+        //arrange
+        String text = "Whippersnapper";
+        char letter = 'p';
+
+        String expectedResult = "ppersnapp";
+
+        //act
+        String actualResult = new StringMethods().returnTextBetweenLetter(text, letter);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void returnTextBetweenLetter_emptyString_HappyPath() {
+        //AAA
+        //arrange
+        String text = "";
+        char letter = 'p';
+
+        String expectedResult = "-1";
+
+        //act
+        String actualResult = new StringMethods().returnTextBetweenLetter(text, letter);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void returnTextBetweenLetter_noLetter_HappyPath() {
+        //AAA
+        //arrange
+        String text = "Whippersnapper";
+        char letter = 'z';
+
+        String expectedResult = "-1";
+
+        //act
+        String actualResult = new StringMethods().returnTextBetweenLetter(text, letter);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    /*Напишите метод startsAndEndsWithSameLetter(), который принимает на вход слово, и возвращает true, если слово начинается и
+     заканчивается на одинаковую букву, и false иначе
+    Test Data:
+            “Abracadabra” → true
+            “Whippersnapper” → false
+
+     */
+
+    @Test
+    public void startsAndEndsWithSameLetter1_HappyPath() {
+        //AAA
+        //arrange
+        String text = "Abracadabra";
+
+        boolean expectedResult = true;
+
+        //act
+        boolean actualResult = new StringMethods().startsAndEndsWithSameLetter(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void startsAndEndsWithSameLetter2_HappyPath() {
+        //AAA
+        //arrange
+        String text = "Whippersnapper";
+
+        boolean expectedResult = false;
+
+        //act
+        boolean actualResult = new StringMethods().startsAndEndsWithSameLetter(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
 
 
 
