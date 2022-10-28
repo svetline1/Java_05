@@ -630,6 +630,71 @@ Take one down, and patch it around.
         Assert.assertEquals(actualResult, expectedResult);
     }
 
+/*Напишите метод returnStringArray, который принимает на вход предложение и возвращает слова из этого
+     предложения в виде массива слов
+    Test Data:
+            “QA for Everyone” → {“QA”, “for”, “Everyone”}
+“Александр Сергеевич Пушкин” → {“Александр”, “Сергеевич”, “Пушкин”}
+
+     */
+
+    @Test
+    public void returnStringArray_HappyPath1() {
+        //AAA
+        //arrange
+        String text = "Александр Сергеевич Пушкин";
+
+        String[] expectedResult = {"Александр", "Сергеевич", "Пушкин"};
+
+        //act
+        String[] actualResult = new StringMethods().returnStringArray(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void returnStringArray_HappyPath2() {
+        //AAA
+        //arrange
+        String text = "QA for Everyone";
+
+        String[] expectedResult = {"QA", "for", "Everyone"};
+
+        //act
+        String[] actualResult = new StringMethods().returnStringArray(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+
+    @Test
+    public void returnStringArray_EmptyArray() {
+        //AAA
+        //arrange
+        String text = "";
+
+        String[] expectedResult = {};
+
+        //act
+        String[] actualResult = new StringMethods().returnStringArray(text);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
+
+
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 
