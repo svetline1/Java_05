@@ -683,14 +683,48 @@ Take one down, and patch it around.
         //assert
         Assert.assertEquals(actualResult, expectedResult);
 
+        }
 
+    /*Написать метод returnNWords, который принимает на вход слово и число n,  и возвращает строку,
+         где слово
+    повторяется n раз.
+    Test Data:
+            “one”, 5 → “oneoneoneoneone”
+     */
+
+    @Test
+    public void returnNWords_HappyPath() {
+        //AAA
+        //arrange
+        String text = "one";
+        int N = 5;
+
+        String expectedResult = "oneoneoneoneone";
+
+        //act
+        String actualResult = new StringMethods().returnNWords(text, N);
+
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
 
     }
 
+    @Test
+    public void returnNWordsRepeat_HappyPath() {
+        //AAA
+        //arrange
+        String text = "one";
+        int N = 5;
 
+        String expectedResult = "oneoneoneoneone";
 
+        //act
+        String actualResult = new StringMethods().returnNWordsRepeat(text, N);
 
+        //assert
+        Assert.assertEquals(actualResult, expectedResult);
 
+    }
 
 
 

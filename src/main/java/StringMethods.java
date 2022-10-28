@@ -275,15 +275,42 @@ Test Data:
         return emptyArray;
     }
 
-   /* Написать метод, который принимает на вход предложение, которое состоит из имени, фамилии,
-   отчества и возвращает текст:
+    /*Написать метод returnNWords, который принимает на вход слово и число n,  и возвращает строку, где слово
+    повторяется n раз.
     Test Data:
-            “Александр Сергеевич Пушкин” →
-            “Имя: Александр
-    Отчество: Сергеевич
-    Фамилия: Пушкин”
+            “one”, 5 → “oneoneoneoneone”
 
-    */
+            String result = "";
+for (int i = 1; i < n; i++)
+{
+ result +=  s;
+}
+return result;
+     */
+
+    public String returnNWords(String text, int N) {
+        if ((text.length() > 0) && (N > 0)){
+            String result = text;
+
+            for (int i = 1; i < N; i++) {
+               result += text;
+            }
+
+            return result;
+        }
+
+        return "-1";
+    }
+
+    public String returnNWordsRepeat(String text, int N) {
+        if ((text.length() > 0) && (N > 0)){
+
+            return text.repeat(N);
+        }
+
+        return "-1";
+    }
+
 
 
 
